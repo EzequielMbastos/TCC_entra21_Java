@@ -1,0 +1,17 @@
+Formação das equipes 
+Escolha do tema
+Definição do problema e da solução proposta
+Definição das funcionalidades 5 no maximo 10 minimo 2 entidades
+Criação do reppsitorio Github
+Criação do quadro kanban
+
+Entregas ate 31/05
+
+Nome do projeto 
+Integrantes da equipe 
+Descrição do problema
+Escopo Inicial do sistema
+Wireframe ou rascunho das telas
+Backlog Inicial
+Link do Github
+Link do kanban
