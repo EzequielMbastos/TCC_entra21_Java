@@ -1,0 +1,17 @@
+ESCOPO QQUE PODE SER ALTERADO 
+
+Objetivos 
+Modelagem do banco de dados
+estrutura do back end
+Criação das entidades/Modelos
+Organização das rotas/endpoints
+Estrutura inicial do frontend
+
+Entregas (ate 05/07)
+
+DER simplificado
+Estrutura inicial do backend
+Estrutura inicial do Front end
+Organização inicial das pastas e componentes
+Primeiras telas funcionais
+

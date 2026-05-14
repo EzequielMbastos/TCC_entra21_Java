@@ -10,8 +10,10 @@ Entregas ate 31/05
 Nome do projeto 
 Integrantes da equipe 
 Descrição do problema
-Escopo Inicial do sistema
-Wireframe ou rascunho das telas
-Backlog Inicial
+Escopo Inicial do sistema (documento que explique o que e a idea e o que cada um fara) READM.MD
+Wireframe ou rascunho das telas (simples )
+Backlog Inicial (issues para ver o quer precisa)
 Link do Github
-Link do kanban
+Link do kanban(project)
+
+

@@ -1,0 +1,20 @@
+AULA 03 13/07 Seg
+
+Objetivos 
+
+Implementação dos CRUDS
+Integração com banco de dados 
+Integração frontend/backend
+Testes das funcionalidades
+Validações básicas
+
+Entregas (ate 02/08)
+
+funcionalidades principais parcialmente concluidas
+
+API funcional 
+
+Comunicação frontend/end
+
+Endpoints documentados 
+

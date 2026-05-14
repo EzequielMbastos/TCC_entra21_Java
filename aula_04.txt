@@ -1,0 +1,17 @@
+Aula 04 - 07/08 Sex
+
+Objetivos
+Melhorias visuais
+Responsividade 
+Tratamento de erros
+Refatoração do codigo
+Correção de bugs
+Implementação de funcionalidades extras
+Preparação de apresentação final  
+
+Entregas ate 21/09
+
+Sistema completo Ajustes visuais e funcionais 
+Checklist de testes 
+Slide da apresentação
+Versão candidata para apresentação

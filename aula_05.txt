@@ -1,0 +1,21 @@
+AULA 05 - 28/09 - Seg 
+
+Objetivos 
+
+Apresentação das equipes 
+Demonstração do sistema
+Explicação Técnica
+
+Cada equipe devera apresentar 
+
+Obejetivo do sistema 
+Probelma identificado 
+Solução proposta
+Tecnologias utilizadas 
+Estrutura do projeto 
+Demonstração pratica 
+Dificuldade enfrentadas 
+Aprendizados obtidos 
+
+
+
