@@ -7,6 +7,9 @@ pais por email, a falta chega na hora pros pais. Dossie tambem ideia do professo
 ideia Bruno : ideia do alex precisa ser via governo, câmara, via particular precisaria vende, visão computacional
 com sensor de fadiga.
 
-ideia Elis : Cidade pequena, 
+ideia Elis : O projeto consiste em um sistema inteligente de gestão para pequenos comerciantes, permitindo controlar clientes, vendas,
+ pagamentos, boletos e contas da empresa em um único lugar. O sistema contará com cobranças automáticas pelo WhatsApp, 
+ controle financeiro, acompanhamento de contas a pagar e receber, além de uma Inteligência Artificial para auxiliar na organização financeira, 
+ análise de gastos e respostas rápidas sobre o negócio.
 
 
