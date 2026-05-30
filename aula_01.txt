@@ -7,9 +7,9 @@ Criação do quadro kanban
 
 Entregas ate 31/05
 
-Nome do projeto : Chave Mestra
-Integrantes da equipe : Alex Brito, Bruno, Ellis, Ezequiel
-Descrição do problema : 
+Nome do projeto : Chave Mestra OK 
+Integrantes da equipe : Alex Brito, Bruno, Ellis, Ezequiel OK
+Descrição do problema : OK
 
 Comerciantes perdem horas digitando notas fiscais manualmente, não têm
 visibilidade rápida sobre estoque e contas a pagar, e sofrem com sistemas
@@ -20,11 +20,11 @@ apenas de consulta, que lê notas fiscais para sugerir dados (sempre
 revisados por um humano) e responde perguntas sobre o negócio. Sem
 internet, o sistema continua funcionando. A IA auxilia, não substitui.
 
-Escopo Inicial do sistema (documento que explique o que e a idea e o que cada um fara) READM.MD
-Wireframe ou rascunho das telas (simples )
-Backlog Inicial (issues para ver o quer precisa)
-Link do Github
-Link do kanban(project)
+Escopo Inicial do sistema (documento que explique o que e a idea e o que cada um fara) READM.MD OK 
+Wireframe ou rascunho das telas (simples ) em andamento
+Backlog Inicial (issues para ver o quer precisa) em andamento
+Link do Github em andamento
+Link do kanban(project) andamento
 
 
 # trabalho de conclusão de curso 
