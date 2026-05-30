@@ -28,9 +28,7 @@ Produto, Categoria, Fornecedor, EntradaEstoque, Venda, ContaPagar
 
 Equipe
 
-| Nome |-------- Responsabilidades |
-|------|-------|-------------------|
 | Ezequiel| Backend/Frontend, APIs, parser NFe, OCR, IA, banco, Docker |
-| INTEGRANTE_2 | Frontend | Telas de produtos, entrada de nota fiscal |
-| INTEGRANTE_3 | Frontend | Telas de vendas, contas a pagar, dashboard |
-| INTEGRANTE_4 | Documentação | Testes, README, wireframes, slides |
+| Elis | Frontend | Telas de produtos, entrada de nota fiscal |
+| Alex | Frontend | Telas de vendas, contas a pagar, dashboard |
+| Bruno | Frontend| README, Tela do Assistente de i.a |
