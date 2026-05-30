@@ -28,7 +28,10 @@ Produto, Categoria, Fornecedor, EntradaEstoque, Venda, ContaPagar
 
 Equipe
 
-| Ezequiel| Backend/Frontend, APIs, parser NFe, OCR, IA, banco, Docker |
-| Elis | Frontend | Telas de produtos, entrada de nota fiscal |
-| Alex | Frontend | Telas de vendas, contas a pagar, dashboard |
+| Ezequiel| Backend/Frontend, APIs, parser NFe, OCR, IA, banco, Docker
+
+| Elis | Frontend | Telas de produtos, entrada de nota fiscal 
+
+| Alex | Frontend | Telas de vendas, contas a pagar, dashboard 
+
 | Bruno | Frontend| README, Tela do Assistente de i.a |
