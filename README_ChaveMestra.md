@@ -1,21 +1,18 @@
-
-
 CHAVE MESTRA - Gestão de Lojas
 
-Sistema web de gestão para lojas.
+Sistema web de gestão para lojas de pequeno e medio porte.
 Cliente real: Loja de Chaves - Itajaí/SC.
 Problema
 
-O lojista perde tempo digitando notas fiscais, não enxerga de forma rápida o que está em falta no estoque, não centraliza os serviços feitos (abertura de carro, conserto de controle) junto com as vendas de produtos, e não tem alertas simples sobre contas a pagar.
+O pequeno e medio lojista fica no limbo, pois empresas grandes não tem uma solução simples e compativel com esse tipo de negocio, o lojista perde tempo digitando notas fiscais, não enxerga de forma rápida o que está em falta no estoque, não centraliza os serviços feitos junto com as vendas de produtos e não tem alertas simples sobre contas a pagar.
+
 Solução
 
 Centralizar tudo em um sistema web simples: produtos e serviços no mesmo catálogo, registro único de atendimento (que pode ter venda de produto e serviço junto), entrada de nota fiscal por arquivo XML e painel com os alertas essenciais (estoque baixo e contas a vencer).
 =========================================
 Funcionalidades da primeira versão (MVP)
 
-
 Login e senha para acessar o sistema.
-
 
 1. Catálogo unificado (produtos e serviços), com cadastro, edição, tipo, preço, estoque e estoque mínimo.
 2. Entrada de estoque via upload do XML da nota fiscal eletrônica, com extração automática dos itens.
@@ -29,7 +26,7 @@ Entidades:
 
 Usuário: Terá os atributos de Login e Senha, a base para acessar o sistema.
 
-Catálogo (Produtos/Serviços): É aqui que a mágica acontece. Você precisa de uma entidade principal que represente tanto um produto quanto um serviço.
+Catálogo (Produtos/Serviços): entidade principal que represente tanto um produto quanto um serviço.
 
     Atributos Comuns: Um identificador único (ID), um nome, uma descrição, um preço, um tipo (para diferenciar se é Produto ou Serviço), uma flag ativo para controlar o que aparece no catálogo.
 
@@ -41,11 +38,9 @@ Estoque (Movimentações): Essa entidade é essencial para rastrear o histórico
 
 Nota Fiscal (NF-e): Essa entidade armazenará os metadados da nota fiscal (número, data de emissão, chave de acesso) e servirá como o registro da operação de compra que originou a entrada de mercadorias no estoque.
 
-Atendimento: Esta é uma entidade central, pois une o atendimento ao cliente com a venda. Ela deve conter os detalhes do atendimento e se conectar tanto à tabela de Serviços (quando um serviço é prestado) quanto à tabela de Produtos (quando um produto é vendido). Ao finalizar, ela aciona a lógica para dar baixa no estoque.
+Atendimento: Esta é uma entidade central, pois une o atendimento ao cliente com a venda. Contem os detalhes do atendimento e se conecta tanto à tabela de Serviços (quando um serviço é prestado) quanto à tabela de Produtos (quando um produto é vendido). Ao finalizar, ela aciona a lógica para dar baixa no estoque.
 
 Contas a Pagar: Uma entidade separada para gerenciar as finanças. Ela conterá informações como descricao, valor, dataVencimento, dataPagamento (que pode ser nula se ainda não foi paga) e um status (Pendente, Pago, Vencido). Para o dashboard, você usará a dataVencimento para gerar os alertas.
-
-
 
 -----------------------------------------------------------------
 Possiveis melhorias futuras (fora da entrega) :
@@ -60,10 +55,10 @@ Funcionamento offline.
 -----------------------------------------------------------------
 Equipe
 
-Ezequiel: infraestrutura, segurança, processamento do XML da nota fiscal, estrutura do banco, integração.
+Ezequiel: Frontend, Backend, estrutura do banco, integração.
 
-Elis: catálogo (produtos, serviços, categorias, fornecedores) - backend e telas.
+Elis: catálogo (produtos, serviços, categorias, fornecedores) - e telas.
 
-Alex: atendimentos (registro e baixa de estoque) - backend e telas.
+Alex: atendimentos (registro e baixa de estoque) - frontend e telas.
 
 Bruno: contas a pagar e dashboard - backend e telas.

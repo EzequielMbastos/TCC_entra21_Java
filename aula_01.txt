@@ -2,7 +2,7 @@ Formação das equipes
 Escolha do tema
 Definição do problema e da solução proposta
 Definição das funcionalidades 5 no maximo 10 minimo 2 entidades
-Criação do reppsitorio Github
+Criação do repitorio Github
 Criação do quadro kanban
 
 Entregas ate 31/05
