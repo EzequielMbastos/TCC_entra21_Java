@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chave Mestra - Relatórios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/estilo.css" rel="stylesheet">
+</head>
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="bg-dark text-white" id="sidebar-wrapper" style="width: 260px; min-height: 100vh;">
+      <div class="sidebar-heading text-center py-3">
+        <i class="bi bi-key-fill text-warning" style="font-size: 3rem;"></i>
+        <h5 class="text-warning">Chave Mestra</h5>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="index.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-speedometer2 me-2"></i>Início</a>
+        <a href="atendimento.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-cart-plus me-2"></i>Novo Atendimento</a>
+        <a href="produtos.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-box-seam me-2"></i>Produtos</a>
+        <a href="servicos.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-wrench me-2"></i>Serviços</a>
+        <a href="clientes.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-people me-2"></i>Clientes</a>
+        <a href="financeiro.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-cash-stack me-2"></i>Financeiro</a>
+        <a href="relatorios.html" class="list-group-item list-group-item-action bg-dark text-white active"><i class="bi bi-bar-chart me-2"></i>Relatórios</a>
+        <a href="assistente-ia.html" class="list-group-item list-group-item-action bg-dark text-white"><i class="bi bi-stars me-2"></i>Assistente IA</a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper" class="flex-grow-1 p-3" style="background-color: #f0f2f5;">
+      <nav class="navbar navbar-light bg-white shadow-sm mb-3 rounded">
+        <div class="container-fluid">
+          <button class="btn btn-outline-secondary" id="menu-toggle"><i class="bi bi-list"></i></button>
+          <span class="navbar-text text-muted small" id="data-hora"></span>
+        </div>
+      </nav>
+
+      <div id="conteudo-pagina">
+        <div class="card shadow-sm mb-4">
+          <div class="card-header bg-white">
+            <h5 class="mb-0"><i class="bi bi-filter-circle me-2"></i>Filtros</h5>
+          </div>
+          <div class="card-body">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-3">
+                <label class="form-label">Data inicial</label>
+                <input type="date" id="filtro-inicio" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Data final</label>
+                <input type="date" id="filtro-fim" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-primary w-100" id="btn-gerar-relatorio">Gerar relatório</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <small class="text-muted">Entradas</small>
+                <h4 class="mb-0 mt-2 text-success" id="relatorio-entradas">R$ 0,00</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <small class="text-muted">Saídas</small>
+                <h4 class="mb-0 mt-2 text-danger" id="relatorio-saidas">R$ 0,00</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <small class="text-muted">Saldo</small>
+                <h4 class="mb-0 mt-2 text-primary" id="relatorio-saldo">R$ 0,00</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <small class="text-muted">Atendimentos</small>
+                <h4 class="mb-0 mt-2 text-warning" id="relatorio-atendimentos">0</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-header bg-white">
+            <h5 class="mb-0"><i class="bi bi-table me-2"></i>Detalhes do período</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>Tipo</th>
+                    <th>Categoria</th>
+                    <th>Pessoa</th>
+                    <th>Descrição</th>
+                    <th>Vencimento</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="relatorio-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/relatorios.js"></script>
+</body>
+</html>

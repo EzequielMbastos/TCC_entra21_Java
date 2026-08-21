@@ -1,0 +1,70 @@
+:root {
+  --azul-escuro: #1E3A5F;
+  --cinza-fundo: #f0f2f5;
+  --dourado: #DAA520;
+  --dourado-hover: #B8860B;
+}
+
+body {
+  background-color: var(--cinza-fundo);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sidebar-wrapper {
+  background: linear-gradient(180deg, var(--azul-escuro) 0%, #0F2440 100%);
+  min-height: 100vh;
+}
+
+.list-group-item-action:hover {
+  background-color: #2A4A6B !important;
+  border-left: 4px solid var(--dourado);
+}
+
+.btn-primary {
+  background-color: var(--azul-escuro);
+  border-color: var(--azul-escuro);
+}
+
+.btn-primary:hover {
+  background-color: #16304D;
+  border-color: #16304D;
+}
+
+.btn-ouro {
+  background-color: var(--dourado);
+  border-color: var(--dourado);
+  color: white;
+}
+
+.btn-ouro:hover {
+  background-color: var(--dourado-hover);
+  border-color: var(--dourado-hover);
+  color: white;
+}
+
+.card-resumo {
+  border-left: 4px solid var(--dourado);
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#itens-atendimento tr {
+  vertical-align: middle;
+}
+
+.autocomplete-list {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#page-content-wrapper {
+  background-color: var(--cinza-fundo);
+}

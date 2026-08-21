@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chave Mestra - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/estilo.css" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1E3A5F 0%, #0F2440 50%, #DAA520 140%);
+    }
+
+    .login-card {
+      width: min(100%, 980px);
+      border: none;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .login-side {
+      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(245,247,250,0.95));
+      padding: 3rem 2.4rem;
+    }
+
+    .brand-mark {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #DAA520, #B8860B);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 12px 24px rgba(218, 165, 32, 0.35);
+    }
+
+    .login-panel {
+      background: #fff;
+      padding: 3rem 2.2rem;
+    }
+
+    .form-control:focus {
+      border-color: #DAA520;
+      box-shadow: 0 0 0 0.2rem rgba(218, 165, 32, 0.18);
+    }
+
+    .btn-ouro {
+      background-color: #DAA520;
+      border-color: #DAA520;
+      color: #fff;
+    }
+
+    .btn-ouro:hover {
+      background-color: #B8860B;
+      border-color: #B8860B;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card login-card">
+      <div class="row g-0">
+        <div class="col-lg-6 login-side d-flex flex-column justify-content-center">
+          <div class="brand-mark">
+            <i class="bi bi-key-fill"></i>
+          </div>
+          <h1 class="display-6 fw-bold text-dark mb-3">Chave Mestra</h1>
+          <p class="text-secondary fs-6 mb-4">
+            Acesse o painel de atendimento e acompanhe vendas, clientes e estoque em um só lugar.
+          </p>
+          <div class="d-flex align-items-center gap-3 text-secondary">
+            <i class="bi bi-check-circle-fill text-success"></i>
+            <span>Controle rápido de atendimentos</span>
+          </div>
+          <div class="d-flex align-items-center gap-3 text-secondary mt-2">
+            <i class="bi bi-check-circle-fill text-success"></i>
+            <span>Relatórios e financeiro em tempo real</span>
+          </div>
+          <div class="d-flex align-items-center gap-3 text-secondary mt-2">
+            <i class="bi bi-check-circle-fill text-success"></i>
+            <span>Gestão de produtos, serviços e clientes</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 login-panel">
+          <div class="mb-4">
+            <p class="text-uppercase text-warning fw-semibold mb-1">Bem-vindo</p>
+            <h2 class="fw-bold mb-0">Entrar no sistema</h2>
+          </div>
+
+          <form id="form-login">
+            <div class="mb-3">
+              <label for="email-login" class="form-label">E-mail</label>
+              <input id="email-login" type="email" class="form-control form-control-lg" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="senha-login" class="form-label">Senha</label>
+              <input id="senha-login" type="password" class="form-control form-control-lg" placeholder="••••••••" required>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="lembrar">
+                <label class="form-check-label small text-muted" for="lembrar">Lembrar-me</label>
+              </div>
+              <a href="#" class="small text-decoration-none text-primary">Esqueci a senha</a>
+            </div>
+
+            <button type="submit" class="btn btn-ouro btn-lg w-100">
+              <i class="bi bi-box-arrow-in-right me-2"></i>Entrar
+            </button>
+          </form>
+
+          <div class="mt-4 text-center small text-muted">
+            Acesso demo:<br>
+            <strong>admin@chavemestra.com</strong> / <strong>123456</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const AUTH_STORAGE_KEY = 'chave_mestra_usuario_logado';
+
+    const usuariosDemo = [
+      { nome: 'Administrador', email: 'admin@chavemestra.com', senha: '123456', cargo: 'Gerente' },
+      { nome: 'Joana Costa', email: 'joana@chavemestra.com', senha: '123456', cargo: 'Atendente' }
+    ];
+
+    function setCurrentUser(usuario) {
+      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(usuario));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const formLogin = document.getElementById('form-login');
+
+      if (localStorage.getItem(AUTH_STORAGE_KEY)) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      formLogin.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById('email-login').value.trim();
+        const senha = document.getElementById('senha-login').value.trim();
+
+        const usuario = usuariosDemo.find(item => item.email.toLowerCase() === email.toLowerCase() && item.senha === senha);
+
+        if (!usuario) {
+          alert('E-mail ou senha inválidos.');
+          return;
+        }
+
+        setCurrentUser({
+          nome: usuario.nome,
+          email: usuario.email,
+          cargo: usuario.cargo
+        });
+
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
+</body>
+</html>
